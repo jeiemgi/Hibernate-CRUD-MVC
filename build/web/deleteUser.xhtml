@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p>
+                Ingrese el ID del usuario Eliminar: <h:inputText value="#{userBean.id}"></h:inputText>
+                <h:commandButton value="Consultar" action="#{userBean.returnUserById}"></h:commandButton>  
+            </p>
+            <hr/>
+            <table>
+              <tr>
+                <td>Nombre(s): </td>
+                <td>#{userBean.firstName}</td>
+              </tr>
+              <tr>
+                <td>Apellido(s): </td>
+                <td>#{userBean.lastName}</td>
+              </tr>
+              <tr>
+                <td>Email: </td>
+                <td>#{userBean.email}</td>
+              </tr>
+              <tr>
+                <td>Teléfono: </td>
+                <td>#{userBean.phoneNumber}</td>
+              </tr>
+              <tr>
+                <td>Genéro: </td>
+                <td>#{userBean.gender}</td>
+              </tr>
+              <tr>
+                <td style="color: red">¿Deseas Eliminarlo?</td>
+                <td><h:commandButton value="Eliminar" action="#{userBean.deleteUser}"></h:commandButton></td>
+              </tr>
+            </table>
+            <h:messages infoStyle="color: blue" globalOnly="true"></h:messages>
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Consultar Usuario</title>
+    </h:head>
+    <h:body>
+        <h1>Buscar Usuario</h1>
+        
+        <h:form>
+            <label>ID: </label>
+            <h:inputText value="#{userBean.id}"></h:inputText> <br/>
+            <label>Nombres: </label>
+            <h:inputText value="#{userBean.firstName}"></h:inputText> <br/>
+            <label>Apellidos: </label>
+            <h:inputText value="#{userBean.lastName}"></h:inputText><br/>
+            <label>Email: </label>
+            <h:inputText value="#{userBean.email}"></h:inputText><br/>
+            <label>Teléfono: </label>
+            <h:inputText value="#{userBean.phoneNumber}"></h:inputText><br/>
+            <label>Género: </label>
+            <h:inputText value="#{userBean.gender}"></h:inputText><br/>
+            
+            <h:commandButton value="Consultar" action="#{userBean.returnUserById}"></h:commandButton>
+            <h:messages infoStyle="color: blue" globalOnly="true"></h:messages>
+        </h:form>
+
+    </h:body>
+</html>
+
